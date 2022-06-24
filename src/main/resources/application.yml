@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+db-groups:
+  - name: master
+    list:
+      - host: 127.0.0.1
+        port: 3306
+        database: git_chinwin
+        user: master_user
+        pass: master_pwd
+        pool:
+          initial-size: 10
+          max-size: 50
+          max-idle-time: 30m
+          validation-query: SELECT 1
+  - name: slave
+    list:
+      - host: 127.0.0.1
+        port: 3306
+        database: git_chinwin
+        user: salve_user
+        pass: salve_pwd
+        pool:
+          initial-size: 10
+          max-size: 50
+          max-idle-time: 30m
+          validation-query: SELECT 1
+
+
+logging.level.cn.git_chinwin.cc.plugins: DEBUG
