@@ -30,5 +30,3 @@ src/test/
 
 mvnw
 mvnw.cmd
-
-src/main/resources/application-prod.yml
