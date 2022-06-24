@@ -2,7 +2,6 @@
 .mvn/
 .DS_Store
 logs/
-runtime/
 src/test/
 
 ### STS ###
